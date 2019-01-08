@@ -1,0 +1,9 @@
+.DS_Store
+
+# Idea files
+############
+.ida
+out
+
+*.iml
+*gradle
