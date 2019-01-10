@@ -1,0 +1,9 @@
+server.port: 8080
+
+spring.application.name: cab-service-v1
+
+# Cassandra Config
+spring.data.cassandra:
+  contact-points: localhost
+  port: 9042
+  keyspace-name: cab_service
