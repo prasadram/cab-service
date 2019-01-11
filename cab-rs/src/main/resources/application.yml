@@ -7,3 +7,21 @@ spring.data.cassandra:
   contact-points: localhost
   port: 9042
   keyspace-name: cab_service
+
+
+cab.error.messages:
+  API_TEAM_MEMBER_ID_NOT_NULL: Team Member Id shouldn't be Null
+  API_TEAM_MEMBER_GENDER_NOT_NULL: Team Member Gender shouldn't be Null
+  API_TEAM_MEMBER_DROP_POINT_NOT_NULL: Team Member Drop Point shouldn't be Null
+  API_TEAM_MEMBER_GENDER_NOT_VALID: Please enter a valid Gender
+  API_CAB_ID_NOT_NULL: Cab Id shouldn't be Null
+  API_CAB_COST_NOT_NULL: Cab Cost shouldn't be Null
+  API_CAB_CAPACITY_NOT_NULL: Cab Capacity shouldn't be Null
+  API_CAB_COST_INVALID: Please enter a valid cost
+  API_CAB_CAPACITY_INVALID: Please enter a valid capacity
+  API_HEAD_QUARTER_DISTANCE_NOT_NULL: Header Quarder distance shouldn't be Null
+  API_POINTA_DISTANCE_NOT_NULL: Point A distance shouldn't be Null
+  API_POINTB_DISTANCE_NOT_NULL: Point B distance shouldn't be Null
+  API_POINTC_DISTANCE_NOT_NULL: Point C distance shouldn't be Null
+  API_POINTD_DISTANCE_NOT_NULL: Point D distance shouldn't be Null
+  API_POINTE_DISTANCE_NOT_NULL: Point E distance shouldn't be Null

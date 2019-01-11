@@ -18,7 +18,7 @@ import static org.letuslearn.cabs.constants.LogConstants.LOG_OK_PATTERN;
 public class HealthResource {
 
   @Value("${project.name:Cab Service}")
-  String projectName;
+  private String projectName;
 
   @RequestMapping(value = "/check", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
   public ResponseEntity check() {

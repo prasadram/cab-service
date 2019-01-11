@@ -14,7 +14,7 @@ CREATE TABLE cabs(
  primary key (id)
  );
 
-CREATE TABLE routes(
+CREATE TABLE drop_points(
  source text,
  destination text,
  distance int,

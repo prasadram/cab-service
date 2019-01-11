@@ -9,13 +9,14 @@ import javax.validation.constraints.NotNull;
 public class TeamMemberDto {
 
   @JsonProperty("team_member_id")
-  @NotNull
+  @NotNull(message = "API_TEAM_MEMBER_ID_NOT_NULL")
   private String id;
 
-  @NotNull
+  @NotNull(message = "API_TEAM_MEMBER_GENDER_NOT_NULL")
   private String gender;
 
-  @NotNull
+  @NotNull(message = "API_TEAM_MEMBER_DROP_POINT_NOT_NULL")
   @JsonProperty("drop_point")
   private String dropPoint;
+
 }

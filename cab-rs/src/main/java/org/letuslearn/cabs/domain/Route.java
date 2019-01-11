@@ -10,12 +10,16 @@ import org.springframework.data.cassandra.mapping.Table;
 @Table("routes")
 public class Route {
 
-  @PrimaryKeyColumn(name = "source", ordinal = 1, type = PrimaryKeyType.PARTITIONED)
-  private String source;
+  @PrimaryKeyColumn(name="cabId", type = PrimaryKeyType.PARTITIONED)
+  private int cabId;
 
-  @PrimaryKeyColumn(name = "destination", ordinal = 2, type = PrimaryKeyType.CLUSTERED)
-  private String destination;
+  @Column("team_members")
+  private String teamMembers;
 
-  @Column("distance")
-  private int distance;
+  @Column("route")
+  private String route;
+
+  @Column("route_cost")
+  private int routeCost;
+
 }

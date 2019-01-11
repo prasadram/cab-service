@@ -2,6 +2,6 @@ package org.letuslearn.cabs.service;
 
 import org.letuslearn.cabs.restservice.dto.TeamMemberDto;
 
-public interface RegistrationService {
+public interface TeamMemberService {
   void registerMember(TeamMemberDto teamMemberDto);
 }
