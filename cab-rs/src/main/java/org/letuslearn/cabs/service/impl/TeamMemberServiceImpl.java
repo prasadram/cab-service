@@ -9,6 +9,8 @@ import org.letuslearn.cabs.service.TeamMemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 import static org.letuslearn.cabs.restservice.mapper.TeamMemberRequestMapper.toTeamMember;
 
 
@@ -28,6 +30,11 @@ public class TeamMemberServiceImpl implements TeamMemberService {
       throw new PreConditionFailedException("API_TEAM_MEMBER_GENDER_NOT_VALID", "Please enter a valid Gender");
     }
     TeamMember registeredTeamMember = teamMemberRepository.addMember(teamMember);
+  }
+
+  @Override
+  public List<TeamMember> getAllTeamMembers() {
+    return teamMemberRepository.getAllTeamMembers();
   }
 
   private boolean isValidMember(TeamMember teamMember) {
