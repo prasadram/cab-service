@@ -1,0 +1,47 @@
+
+
+apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
+apply plugin: 'jacoco'
+
+group = 'org.letuslearn'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+repositories {
+    mavenCentral()
+}
+
+ext {
+    set('springCloudVersion', 'Edgware.SR5')
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-data-cassandra'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
+    compileOnly 'org.projectlombok:lombok:1.16.18'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'junit:junit:4.12'
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+    }
+}
+
+jacoco {
+    toolVersion = "0.8.1"
+    reportsDir = file("$buildDir/reports/jacco")
+}
+
+jacocoTestReport {
+    group = "Reporting"
+    reports {
+        xml.enabled true
+        csv.enabled false
+        additionalSourceDirs = files("src/main/java")
+        finalizedBy jacocoTestCoverageVerification
+    }
+}
