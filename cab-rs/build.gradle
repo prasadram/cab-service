@@ -38,12 +38,14 @@ jacoco {
 
 jacocoTestReport {
     group = "Reporting"
-    reports {
+    additionalSourceDirs = files("src/main/java")
+    finalizedBy jacocoTestCoverageVerification
+    /*reports {
         xml.enabled true
         csv.enabled false
-        additionalSourceDirs = files("src/main/java")
+        
         finalizedBy jacocoTestCoverageVerification
-    }
+    }*/
 }
 
 jacocoTestCoverageVerification {
