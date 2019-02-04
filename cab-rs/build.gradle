@@ -45,3 +45,17 @@ jacocoTestReport {
         finalizedBy jacocoTestCoverageVerification
     }
 }
+
+jacocoTestCoverageVerification {
+    violationRules {
+        rule {
+            limit {
+                minimum = min_coverage.toBigDecimal()
+            }
+        }
+    }
+}
+
+test {
+    finalizedBy jacocoTestReport
+}
